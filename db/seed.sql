@@ -1,24 +1,24 @@
-INSERT INTO departments (id, name)
+INSERT INTO departments (name)
 VALUES
-  (1, 'Human Resources'),
-  (2, 'Finance'),
-  (3, 'Marketing'),
-  (4, 'Sales');
+  ('Human Resources'),
+  ('Finance'),
+  ('Marketing'),
+  ('Sales');
 
-INSERT INTO roles (id, title, salary, department_id)
+INSERT INTO roles (title, salary, department_id)
 VALUES
-  (1, 'Recruiter', 56,000.00, 1),
-  (2, 'Trainer', 50,000.00, 1),
-  (3, 'Accountant', 60,000.00, 2),
-  (4, 'Payroll Specialist', 54,000.00, 2),
-  (5, 'Marketing Coordinator', 65,000.00, 3)
-  (6, 'Sales Representative', 62,000.00, 4)
-  (7, 'Social Media Manager', 56,000.00, 3)
-  (8, 'Event Coordinator', 60,000.00, 3);
+  ('Recruiter', 56000, 1),
+  ('Trainer', 50000, 1),
+  ('Accountant', 60000, 2),
+  ('Payroll Specialist', 54000, 2),
+  ('Marketing Coordinator', 65000, 3),
+  ('Sales Representative', 62000, 4),
+  ('Social Media Manager', 56000, 3),
+  ('Event Coordinator', 60000, 3);
 
-INSERT INTO employees (id, first_name, last_name, role_id, manager_id)
+INSERT INTO employees (first_name, last_name, role_id, manager_id)
 VALUES
-    (5454, 'Samuel', 'Richards', 1, 1),
-    (6327, 'Amanda', 'Jackson', 2, 1),
-    (9826, 'Nicole', 'Tofeld', 3, 2),
-    (4044, 'Maria', 'Estrada', 4, 2);
+    ('Samuel', 'Richards', 1, NULL),
+    ('Amanda', 'Jackson', 2, 1),
+    ('Cameron', 'Tofeld', 3, NULL),
+    ('Maria', 'Estrada', 4, 2);
