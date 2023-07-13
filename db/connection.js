@@ -6,5 +6,8 @@ const connection = mysql2.createConnection({
     password: '',
     database: 'employee_tracker'
 });
+connection.connect(function (err){
+    if (err) throw err
+})
 
 module.exports = connection;
