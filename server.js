@@ -80,7 +80,7 @@ function addEmployee() {
             name: name,
             value: id
         }))
-        
+
         db.query('select * from roles', (err, result) => {
             const roleList = result.map(({ title, id }) => ({
                 name: title,
@@ -109,6 +109,7 @@ function addEmployee() {
             }]).then((answer) => {
                 insertEmployee(answer.first_name, answer.last_name, answer.role, answer.department);
                 console.log(`Added ${answer.first_name} ${answer.last_name} to the database`)
+                startApp();
             })
         })
     })
