@@ -45,6 +45,7 @@ function viewRoles() {
     db.query('SELECT * FROM roles', (err, res) => {
         if (err) throw error
         console.table(res);
+        startApp();
     });
 };
 
@@ -71,6 +72,7 @@ function addDepartment() {
     }).then((answer) => {
         insertDepartment(answer.department);
         console.log(`Added ${answer.department} to the database`)
+        startApp();
     })
 }
 
